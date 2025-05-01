@@ -1,4 +1,4 @@
-package com.customer.mealrecommendation.actors;
+package com.project.cooking.actors;
 
 
 /**
@@ -115,4 +115,12 @@ public class Login {
             return "None";
         }
     }
+    
+    
+    public static void logout() {
+        loggedInCustomer = null;
+        loggedInChef = null;
+    }
+    
+    
 }

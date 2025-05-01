@@ -1,0 +1,47 @@
+[
+  {
+    "username": "Akram",
+    "password": "Chef122",
+    "firstName": "Akram",
+    "lastName": "Elwan",
+    "email": "Akram.Elwan@kitchenhub.com",
+    "phone": "0509988776",
+    "assignedCustomers": [ "Abood Elwan", "Sarah Johnson" ]
+  },
+  {
+    "username": "ChefNadia",
+    "password": "Chef321",
+    "firstName": "Nadia",
+    "lastName": "Zein",
+    "email": "nadia.zein@kitchenhub.com",
+    "phone": "0512233445",
+    "assignedCustomers": [ "James Brown" ]
+  },
+  {
+    "username": "ChefHassan",
+    "password": "Chef500",
+    "firstName": "Hassan",
+    "lastName": "Ali",
+    "email": "hassan.ali@kitchenhub.com",
+    "phone": "0523344556",
+    "assignedCustomers": [ "Layla Ahmed" ]
+  },
+  {
+    "username": "ChefLinda",
+    "password": "Chef673",
+    "firstName": "Linda",
+    "lastName": "Nguyen",
+    "email": "linda.nguyen@kitchenhub.com",
+    "phone": "0534455667",
+    "assignedCustomers": [ "Michael Chen" ]
+  },
+  {
+    "username": "ChefYousef",
+    "password": "Chef839",
+    "firstName": "Yousef",
+    "lastName": "Karim",
+    "email": "yousef.karim@kitchenhub.com",
+    "phone": "0545566778",
+    "assignedCustomers": [ "Emma Williams" ]
+  }
+]

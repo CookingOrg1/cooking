@@ -1,4 +1,4 @@
-package com.customer.mealrecommendation;
+package com.project.cooking.cart;
 
 
 public class CustomerProfile {

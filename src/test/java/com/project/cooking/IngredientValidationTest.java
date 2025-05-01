@@ -1,13 +1,13 @@
 package com.project.cooking;
 
-import com.customer.mealrecommendation.MealRecommendationService;
-import com.customer.mealrecommendation.actors.Customer;
-import com.customer.mealrecommendation.actors.Meal;
+import com.project.cooking.actors.Customer;
+import com.project.cooking.actors.Login;
+import com.project.cooking.meals.Meal;
+import com.project.cooking.meals.MealRecommendationService;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import com.customer.mealrecommendation.actors.Login;
 
 import java.util.List;
 
@@ -42,7 +42,6 @@ public class IngredientValidationTest {
 
     @When("I choose valid ingredients that match my dietary preferences")
     public void iChooseValidIngredientsThatMatchMyDietaryPreferences() {
-        // Test multiple valid combinations
         customer.setDietaryPreferences("Vegetarian, Keto");
         customer.setAllergies("Gluten-Free, Peanut-Free, Nut-Free");
         recommendedMeals = mealRecommendationService.recommendMeals(customer);

@@ -6,11 +6,11 @@ import io.cucumber.java.en.When;
 
 
 import static org.junit.Assert.*;
-import com.customer.mealrecommendation.actors.Login;
 
-import com.customer.mealrecommendation.CustomerProfile;
-import com.customer.mealrecommendation.actors.Chef;
-import com.customer.mealrecommendation.actors.Meal;
+import com.project.cooking.actors.Chef;
+import com.project.cooking.actors.Login;
+import com.project.cooking.cart.CustomerProfile;
+import com.project.cooking.meals.Meal;
 
 
 public class CustomerDietaryPreferencesTest {

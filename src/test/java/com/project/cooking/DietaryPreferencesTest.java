@@ -4,9 +4,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import com.customer.mealrecommendation.MealRecommendationService;
-import com.customer.mealrecommendation.actors.Customer;
-import com.customer.mealrecommendation.actors.Login;
+import com.project.cooking.actors.Customer;
+import com.project.cooking.actors.Login;
+import com.project.cooking.meals.MealRecommendationService;
 
 import static org.junit.Assert.*;
 

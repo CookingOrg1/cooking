@@ -1,10 +1,10 @@
-package com.customer.mealrecommendation;
+package com.project.cooking.meals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.customer.mealrecommendation.actors.Customer;
+import com.project.cooking.actors.Customer;
 
 public class MealRecommendationService {
 
