@@ -16,7 +16,8 @@ import static org.junit.Assert.*;
 public class IngredientValidationTest {
 
     private Customer customer;
-     private Meal meal;
+     @SuppressWarnings("unused")
+	private Meal meal;
     private MealRecommendationService mealRecommendationService;
     private boolean customizationSuccessful;
     private String errorMessage;

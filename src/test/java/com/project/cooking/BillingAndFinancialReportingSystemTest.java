@@ -3,7 +3,6 @@ package com.project.cooking;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import com.project.cooking.actors.SystemAdmin;
 import com.project.cooking.finance.*;
 
 import static org.junit.Assert.*;
@@ -12,7 +11,6 @@ public class BillingAndFinancialReportingSystemTest {
 
     private FinancialReport report;
     private Invoice invoice;
-    private SystemAdmin systemAdmin;
 
     @Given("the customer has completed a purchase")
     public void theCustomerHasCompletedAPurchase() {

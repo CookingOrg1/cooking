@@ -1,6 +1,5 @@
 package com.project.cooking.actors;
 
-
 /**
  * The Login class handles user login functionality for both Customer and Chef roles. 
  * It ensures that only one user (either a Customer or a Chef) is logged in at any time 
@@ -115,12 +114,17 @@ public class Login {
             return "None";
         }
     }
-    
-    
+
+    /**
+     * Logs out the currently logged-in user, whether a Customer or a Chef.
+     * This method sets both logged-in customer and chef to null.
+     * 
+     * @param none
+     * @return void
+     * @author abood
+     */
     public static void logout() {
         loggedInCustomer = null;
         loggedInChef = null;
     }
-    
-    
 }

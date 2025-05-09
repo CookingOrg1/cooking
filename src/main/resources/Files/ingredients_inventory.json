@@ -1,0 +1,122 @@
+{
+  "Potatoes" : {
+    "quantity" : 32,
+    "threshold" : 10,
+    "unit" : "pieces"
+  },
+  "Mixed Vegetables" : {
+    "quantity" : 30,
+    "threshold" : 5,
+    "unit" : "packs"
+  },
+  "Onion" : {
+    "quantity" : 16,
+    "threshold" : 8,
+    "unit" : "pieces"
+  },
+  "Chicken breast" : {
+    "quantity" : 0,
+    "threshold" : 12,
+    "unit" : "pieces"
+  },
+  "Ground beef" : {
+    "quantity" : 35,
+    "threshold" : 5,
+    "unit" : "kg"
+  },
+  "Cheese" : {
+    "quantity" : 24,
+    "threshold" : 8,
+    "unit" : "slices"
+  },
+  "Olive oil" : {
+    "quantity" : 16,
+    "threshold" : 2,
+    "unit" : "liters"
+  },
+  "Bell peppers" : {
+    "quantity" : 26,
+    "threshold" : 7,
+    "unit" : "pieces"
+  },
+  "Eggs" : {
+    "quantity" : 60,
+    "threshold" : 12,
+    "unit" : "pieces"
+  },
+  "Salt" : {
+    "quantity" : 50,
+    "threshold" : 1,
+    "unit" : "kg"
+  },
+  "Lettuce" : {
+    "quantity" : 40,
+    "threshold" : 4,
+    "unit" : "heads"
+  },
+  "Broccoli" : {
+    "quantity" : 14,
+    "threshold" : 6,
+    "unit" : "heads"
+  },
+  "Carrots" : {
+    "quantity" : 56,
+    "threshold" : 10,
+    "unit" : "pieces"
+  },
+  "Basil" : {
+    "quantity" : 40,
+    "threshold" : 6,
+    "unit" : "grams"
+  },
+  "Black pepper" : {
+    "quantity" : 24,
+    "threshold" : 1,
+    "unit" : "kg"
+  },
+  "Pasta" : {
+    "quantity" : 29,
+    "threshold" : 8,
+    "unit" : "packs"
+  },
+  "Garlic" : {
+    "quantity" : 16,
+    "threshold" : 8,
+    "unit" : "cloves"
+  },
+  "Tomatoes" : {
+    "quantity" : 50,
+    "threshold" : 10,
+    "unit" : "pieces"
+  },
+  "Vegan Cheese" : {
+    "quantity" : 20,
+    "threshold" : 4,
+    "unit" : "slices"
+  },
+  "Spinach" : {
+    "quantity" : 26,
+    "threshold" : 6,
+    "unit" : "bunches"
+  },
+  "Black beans" : {
+    "quantity" : 30,
+    "threshold" : 4,
+    "unit" : "cans"
+  },
+  "Cucumber" : {
+    "quantity" : 40,
+    "threshold" : 6,
+    "unit" : "pieces"
+  },
+  "Rice" : {
+    "quantity" : 12,
+    "threshold" : 16,
+    "unit" : "cups"
+  },
+  "Milk" : {
+    "quantity" : 8,
+    "threshold" : 3,
+    "unit" : "liters"
+  }
+}

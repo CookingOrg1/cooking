@@ -37,13 +37,13 @@ public class CustomerDietaryPreferencesTest {
     @Then("I should be able to view their dietary preferences")
     public void iShouldBeAbleToViewTheirDietaryPreferences() {
         assertNotNull("Dietary preferences should not be null", dietaryPreferences);
-        assertEquals("Vegetarian", dietaryPreferences); // Example assertion
+        assertEquals("Vegetarian", dietaryPreferences); 
     }
 
     @Then("I should be able to use this information to customize their meal")
     public void iShouldBeAbleToUseThisInformationToCustomizeTheirMeal() {
         Meal customizedMeal = chef.customizeMeal(customerProfile);
         assertNotNull("Customized meal should not be null", customizedMeal);
-        assertEquals("Vegetarian Meal", customizedMeal.getMealName()); // Example assertion
+        assertEquals("Vegetarian Meal", customizedMeal.getMealName());
     }
 }

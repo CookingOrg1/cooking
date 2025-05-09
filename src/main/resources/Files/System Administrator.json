@@ -1,0 +1,18 @@
+[
+  {
+    "firstName": "Kareem",
+    "lastName": "Elwan",
+    "email": "Kareem.Elwan@specialcook.com",
+    "phone": "0591234567",
+    "username": "Kareem",
+    "password": "Admin123"
+  },
+  {
+    "firstName": "Ehap",
+    "lastName": "Elwan",
+    "email": "Ehap.Elwan@specialcook.com",
+    "phone": "0599876543",
+    "username": "Ehap",
+    "password": "Admin456"
+  }
+]

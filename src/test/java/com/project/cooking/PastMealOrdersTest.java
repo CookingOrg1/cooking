@@ -21,7 +21,8 @@ public class PastMealOrdersTest {
     private OrderHistory orderHistory;
     private Cart cart;
     private String systemMessage;
-    private MealRecommendationService mealRecommendationService;
+    @SuppressWarnings("unused")
+	private MealRecommendationService mealRecommendationService;
     
 
 	@Given("the customer is logged in")

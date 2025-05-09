@@ -20,7 +20,8 @@ import java.util.List;
 
 public class CustomerOrderHistoryTest {
 
-	 private Customer customer;
+	 @SuppressWarnings("unused")
+	private Customer customer;
 	    private OrderHistory orderHistory;
 	    private Order testOrder;
 	    private String orderId;

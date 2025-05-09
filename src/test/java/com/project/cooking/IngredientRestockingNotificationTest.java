@@ -13,7 +13,8 @@ public class IngredientRestockingNotificationTest {
 
     private Ingredient ingredient;
     private Kitchen kitchenManager;
-    private Kitchen kitchen;
+    @SuppressWarnings("unused")
+	private Kitchen kitchen;
 
     @Given("the ingredient {string} has a threshold of {int} units")
     public void theIngredientHasAThresholdOfUnits(String ingredientName, Integer threshold) {

@@ -1,11 +1,18 @@
 package com.project.cooking.cart;
 
-
 public class CustomerProfile {
+    
+    @SuppressWarnings("unused")
     private String customerId;
     private String dietaryPreferences;
 
-    
+    /**
+     * Constructs a CustomerProfile with a given customer ID.
+     * Initializes the dietary preferences to "Vegetarian" by default.
+     * 
+     * @param customerId The unique identifier for the customer.
+     * @author abood
+     */
     public CustomerProfile(String customerId) {
         this.customerId = customerId;
         this.dietaryPreferences = "Vegetarian"; 

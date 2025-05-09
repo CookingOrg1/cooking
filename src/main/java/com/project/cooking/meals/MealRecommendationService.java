@@ -13,7 +13,7 @@ public class MealRecommendationService {
      * This method checks the customer's dietary preferences and allergies, then 
      * suggests suitable meal options that meet their needs.
      * 
-     * @author abood
+     * @author omar
      * @param customer - the customer whose dietary preferences and allergies 
      *                  will be used to recommend meals.
      * @return List<String> - a list of meal recommendations based on the 
@@ -56,7 +56,7 @@ public class MealRecommendationService {
      * This method checks whether the dietary preference of the customer 
      * contains "vegetarian".
      * 
-     * @author abood
+     * @author oamr
      * @param preferences - the dietary preferences of the customer.
      * @return boolean - true if the customer is vegetarian, false otherwise.
      */
@@ -69,7 +69,7 @@ public class MealRecommendationService {
      * This method checks whether the dietary preference of the customer 
      * contains "vegan".
      * 
-     * @author abood
+     * @author omar
      * @param preferences - the dietary preferences of the customer.
      * @return boolean - true if the customer is vegan, false otherwise.
      */
@@ -82,7 +82,7 @@ public class MealRecommendationService {
      * This method checks whether the dietary preference of the customer 
      * contains "keto".
      * 
-     * @author abood
+     * @author oamr
      * @param preferences - the dietary preferences of the customer.
      * @return boolean - true if the customer is keto, false otherwise.
      */
@@ -95,7 +95,7 @@ public class MealRecommendationService {
      * This method checks whether the dietary preference of the customer 
      * contains "paleo".
      * 
-     * @author abood
+     * @author omar
      * @param preferences - the dietary preferences of the customer.
      * @return boolean - true if the customer is paleo, false otherwise.
      */
@@ -107,7 +107,7 @@ public class MealRecommendationService {
      * Checks if the customer is gluten-free.
      * This method checks whether the allergies list of the customer contains "gluten-free".
      * 
-     * @author abood
+     * @author oamr
      * @param allergyList - the list of allergies of the customer.
      * @return boolean - true if the customer is gluten-free, false otherwise.
      */
@@ -119,7 +119,7 @@ public class MealRecommendationService {
      * Checks if the customer is peanut-free.
      * This method checks whether the allergies list of the customer contains "peanut-free".
      * 
-     * @author abood
+     * @author omar
      * @param allergyList - the list of allergies of the customer.
      * @return boolean - true if the customer is peanut-free, false otherwise.
      */
@@ -131,7 +131,7 @@ public class MealRecommendationService {
      * Checks if the customer is dairy-free.
      * This method checks whether the allergies list of the customer contains "dairy-free".
      * 
-     * @author abood
+     * @author omar
      * @param allergyList - the list of allergies of the customer.
      * @return boolean - true if the customer is dairy-free, false otherwise.
      */
@@ -143,7 +143,7 @@ public class MealRecommendationService {
      * Checks if the customer is nut-free.
      * This method checks whether the allergies list of the customer contains "nut-free".
      * 
-     * @author abood
+     * @author omar
      * @param allergyList - the list of allergies of the customer.
      * @return boolean - true if the customer is nut-free, false otherwise.
      */
@@ -155,7 +155,7 @@ public class MealRecommendationService {
      * Checks if the customer is shellfish-free.
      * This method checks whether the allergies list of the customer contains "shellfish-free".
      * 
-     * @author abood
+     * @author oamr
      * @param allergyList - the list of allergies of the customer.
      * @return boolean - true if the customer is shellfish-free, false otherwise.
      */

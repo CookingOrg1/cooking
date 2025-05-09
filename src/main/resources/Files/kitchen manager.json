@@ -1,0 +1,72 @@
+[
+  {
+    "username": "Ali",
+    "password": "Man123",
+    "firstName": "Ali",
+    "lastName": "elwan",
+    "email": "Ali.Elwan@kitchenhub.com",
+    "phone": "0501234567",
+    "chefs": [
+      {
+        "username": "ChefAkram",
+        "firstName": "Akram",
+        "lastName": "Elwan",
+        "email": "akram.elwan@kitchenhub.com",
+        "phone": "0509988776"
+        
+      },
+      {
+        "username": "ChefNadia",
+        "firstName": "Nadia",
+        "lastName": "Zein",
+        "email": "nadia.zein@kitchenhub.com",
+        "phone": "0512233445"
+      
+      }
+    ]
+  },
+  {
+    "username": "KitchenManager2",
+    "password": "Manager456",
+    "firstName": "Alice",
+    "lastName": "Smith",
+    "email": "alice.smith@kitchenhub.com",
+    "phone": "0507654321",
+    "chefs": [
+      {
+        "username": "ChefHassan",
+        "firstName": "Hassan",
+        "lastName": "Ali",
+        "email": "hassan.ali@kitchenhub.com",
+        "phone": "0523344556"
+       
+      },
+      {
+        "username": "ChefLinda",
+        "firstName": "Linda",
+        "lastName": "Nguyen",
+        "email": "linda.nguyen@kitchenhub.com",
+        "phone": "0534455667"
+       
+      }
+    ]
+  },
+  {
+    "username": "KitchenManager3",
+    "password": "Manager789",
+    "firstName": "Emma",
+    "lastName": "Johnson",
+    "email": "emma.johnson@kitchenhub.com",
+    "phone": "0508765432",
+    "chefs": [
+      {
+        "username": "ChefMona",
+        "firstName": "Mona",
+        "lastName": "Zayed",
+        "email": "mona.zayed@kitchenhub.com",
+        "phone": "0505566778"
+       
+      }
+    ]
+  }
+]
