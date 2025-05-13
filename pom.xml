@@ -13,8 +13,8 @@
   <url>http://www.example.com</url>
 
   <properties>
-    <maven.compiler.source>21</maven.compiler.source>
-    <maven.compiler.target>21</maven.compiler.target>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
     <sonar.organization>cookingorg1</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
@@ -24,7 +24,7 @@
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.8.10</version> <!-- ✅ Add version -->
+        <version>0.8.10</version> 
         <executions>
           <execution>
             <goals>
