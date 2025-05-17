@@ -23,7 +23,10 @@ public class Transaction {
         this.amount = amount;
     }
 
-    /**
+    public Transaction() {
+	}
+
+	/**
      * Retrieves the date of the transaction.
      * 
      * @return String - the date of the transaction.
