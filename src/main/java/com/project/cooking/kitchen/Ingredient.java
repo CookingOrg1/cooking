@@ -20,11 +20,9 @@ public class Ingredient {
     private boolean isAllowed;
     int quantity;
     private String unit;
-    private boolean restockingSuggested = false;
-    private boolean urgentRestockingSuggested = false;
+    private boolean restockingSuggested ;
+    private boolean urgentRestockingSuggested ;
 
-    
-    
     /**
      * Constructor with name and threshold.
      * @param name Name of the ingredient.
@@ -304,14 +302,5 @@ public class Ingredient {
     public void setUnit(String unit) {
         this.unit = unit;
     }
-    
-   
-    
-
-    
-
-    
-    
-
     
 }
