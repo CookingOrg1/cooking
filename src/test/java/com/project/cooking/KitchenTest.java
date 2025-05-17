@@ -13,12 +13,12 @@ import static org.junit.Assert.*;
 public class KitchenTest {
 
     private Kitchen kitchen;
-
     @Before
     public void setUp() {
         kitchen = new Kitchen();
         Kitchen.clearChefs();
     }
+
 
     @Test
     public void testAddChefAndGetAllChefs() {
@@ -83,8 +83,9 @@ public class KitchenTest {
         kitchen.checkAndNotify(ingredient);
 
         assertTrue(kitchen.receivedNotificationFor("Salt"));
-        assertTrue(kitchen.receivedNotificationFor("Sugar"));
+        assertFalse(kitchen.receivedNotificationFor("Sugar")); 
     }
+
 
     @Test
     public void testReceivedNotificationFor_NoNotification() {

@@ -75,15 +75,26 @@ public class Kitchen {
      * @author abood
      */
     public void checkAndNotify(Ingredient ingredient) {
-        if (ingredient.getStockLevel() <= ingredient.getThreshold() && ingredient.getStockLevel() > 0) {
-            ingredient.setRestockingSuggested(true);
-            notified = true;
-        } else if (ingredient.getStockLevel() == 0) {
+        int quantity = ingredient.getStockLevel(); 
+        int threshold = ingredient.getThreshold();
+
+        if (quantity <= 0) {
             ingredient.setUrgentRestockingSuggested(true);
+            ingredient.setRestockingSuggested(false); 
             notifiedImmediately = true;
+            notified = false;
+        } else if (quantity < threshold) {
+            ingredient.setRestockingSuggested(true);
+            ingredient.setUrgentRestockingSuggested(false);  
+            notified = true;
+            notifiedImmediately = false;
+        } else {
+            ingredient.setRestockingSuggested(false);
+            ingredient.setUrgentRestockingSuggested(false);
+            notified = false;
+            notifiedImmediately = false;
         }
     }
-
     /**
      * Checks if a general restocking notification has been issued.
      *
