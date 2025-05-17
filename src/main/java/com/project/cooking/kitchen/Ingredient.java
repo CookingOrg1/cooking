@@ -13,8 +13,6 @@ public class Ingredient {
     private String name;
     private int threshold;
     private int stockLevel;
-    private boolean restockingSuggested;
-    private boolean urgentRestockingSuggested;
     private boolean isAvailable = true;
     public LocalDate expiryDate;
     private int stock;
@@ -22,6 +20,8 @@ public class Ingredient {
     private boolean isAllowed;
     int quantity;
     private String unit;
+    private boolean restockingSuggested = false;
+    private boolean urgentRestockingSuggested = false;
 
     /**
      * Constructor with name and threshold.
@@ -302,4 +302,14 @@ public class Ingredient {
     public void setUnit(String unit) {
         this.unit = unit;
     }
+    
+   
+    
+
+    
+
+    
+    
+
+    
 }

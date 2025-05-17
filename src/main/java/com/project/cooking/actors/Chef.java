@@ -2,6 +2,8 @@ package com.project.cooking.actors;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
 import com.project.cooking.cart.CustomerProfile;
 import com.project.cooking.cart.Notification;
 import com.project.cooking.meals.Meal;
@@ -349,7 +351,20 @@ public void setSpecialty(String specialty) {
 	this.specialty=specialty;
 }
 
-	
+
+
+@Override
+public boolean equals(Object o) {
+    if (this == o) return true;
+    if (!(o instanceof Chef)) return false;
+    Chef chef = (Chef) o;
+    return Objects.equals(name, chef.name);
+}
+
+@Override
+public int hashCode() {
+    return Objects.hash(name);
+}
 	
 }
 
