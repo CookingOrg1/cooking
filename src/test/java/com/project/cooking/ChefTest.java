@@ -153,8 +153,7 @@ public class ChefTest {
     @Test
     public void testSpecialtySetter() {
         chef.setSpecialty("French Cuisine");
-        // specialty field has no getter, so we test by reflection or just assume setter works.
-        // Here, we test indirectly by reflection:
+        
         try {
             java.lang.reflect.Field field = Chef.class.getDeclaredField("specialty");
             field.setAccessible(true);
@@ -166,9 +165,7 @@ public class ChefTest {
     
     @Test
     public void testGetMyNotifications() {
-        // Since NotificationCenter.getNotificationsForChef is static and external,
-        // we can't test internal logic here without mocking.
-        // But we can call and check it returns a non-null List (or mock NotificationCenter if using a framework).
+       
         
         List<Notification> notifications = chef.getMyNotifications();
         assertNotNull(notifications);
