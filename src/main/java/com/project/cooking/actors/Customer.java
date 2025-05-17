@@ -47,6 +47,14 @@ public class Customer {
     	
 	}
 
+	public Customer(String string, String string2, String string3) {
+this.name=string;
+this.email=string2;
+this.address=string3;
+
+
+}
+
 	/**
      * Sets the dietary preferences of the customer.
      * This method allows setting the dietary preferences for the customer, 
