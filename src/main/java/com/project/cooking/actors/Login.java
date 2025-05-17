@@ -14,6 +14,10 @@ public class Login {
     private static Customer loggedInCustomer;
     private static Chef loggedInChef;
 
+    
+    
+    private Login() {
+    }
     /**
      * Logs in as a customer.
      * This method sets the provided Customer as the logged-in user and 

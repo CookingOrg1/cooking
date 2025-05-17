@@ -11,21 +11,21 @@ import com.project.cooking.meals.MealRecommendationService;
 import static org.junit.Assert.*;
 
 import java.util.List;
+
 public class DietaryPreferencesTest {
 
     private Customer customer;
     private MealRecommendationService mealRecommendationService;
-    private String dietaryPreferences; 
-    private String allergies; 
-    
+    private String dietaryPreferences;
+    private String allergies;
 
     @Given("I am a logged-in customer")
     public void iAmALoggedInCustomer() {
-    	customer = new Customer();
-        Login.loginAsCustomer(customer);  
+        customer = new Customer();
+        Login.loginAsCustomer(customer);
 
         if (!Login.isCustomerLoggedIn()) {
-            fail("Customer is not logged in.");  
+            fail("Customer is not logged in.");
         }
 
         mealRecommendationService = new MealRecommendationService();
@@ -43,22 +43,18 @@ public class DietaryPreferencesTest {
 
     @Then("my dietary preferences and allergies should be saved in the system")
     public void myDietaryPreferencesAndAllergiesShouldBeSavedInTheSystem() {
-        assertNotNull(customer.getDietaryPreferences());
-        assertNotNull(customer.getAllergies());
+        assertPreferencesAndAllergiesAreSaved();
     }
 
     @Then("the system should recommend meals that are Vegetarian, Gluten-Free, and Peanut-Free")
     public void theSystemShouldRecommendMealsThatAreVegetarianGlutenFreeAndPeanutFree() {
-        customer.setDietaryPreferences("vegetarian"); 
-        customer.setAllergies("gluten-free, peanut-free"); 
-
-        
+        customer.setDietaryPreferences("vegetarian");
+        customer.setAllergies("gluten-free, peanut-free");
 
         List<String> recommendedMeals = mealRecommendationService.recommendMeals(customer);
 
-
         assertTrue("Expected meal not found: Vegetarian Gluten-Free Peanut-Free Meal",
-                  recommendedMeals.contains("Vegetarian Gluten-Free Peanut-Free Meal"));
+                recommendedMeals.contains("Vegetarian Gluten-Free Peanut-Free Meal"));
     }
 
     @Given("I have previously set my dietary preferences as {string}")
@@ -67,7 +63,6 @@ public class DietaryPreferencesTest {
         customer.setDietaryPreferences(dietaryPreferences);
     }
 
-    
     @Given("I have previously set my allergies as {string}")
     public void iHavePreviouslySetMyAllergiesAs(String allergies) {
         customer.setAllergies(allergies);
@@ -85,8 +80,7 @@ public class DietaryPreferencesTest {
 
     @Then("my updated dietary preferences and allergies should be saved in the system")
     public void myUpdatedDietaryPreferencesAndAllergiesShouldBeSavedInTheSystem() {
-        assertNotNull(customer.getDietaryPreferences());
-        assertNotNull(customer.getAllergies());
+        assertPreferencesAndAllergiesAreSaved(); 
     }
 
     @Then("the system should recommend meals that are Vegan and Dairy-Free")
@@ -97,11 +91,8 @@ public class DietaryPreferencesTest {
 
     @When("I view my profile")
     public void iViewMyProfile() {
-       
         this.dietaryPreferences = customer.getDietaryPreferences();
         this.allergies = customer.getAllergies();
-
-       
     }
 
     @Then("I should see my dietary preferences as {string}")
@@ -112,5 +103,10 @@ public class DietaryPreferencesTest {
     @Then("I should see my allergies as {string}")
     public void iShouldSeeMyAllergiesAs(String expectedAllergies) {
         assertEquals(expectedAllergies, this.allergies);
+    }
+
+    private void assertPreferencesAndAllergiesAreSaved() {
+        assertNotNull("Dietary preferences should not be null", customer.getDietaryPreferences());
+        assertNotNull("Allergies should not be null", customer.getAllergies());
     }
 }
