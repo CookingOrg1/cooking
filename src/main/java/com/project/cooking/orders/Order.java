@@ -40,7 +40,11 @@ public class Order {
         this.mealName = mealName;
     }
     
-    /**
+    public Order() {
+    	
+}
+
+	/**
      * Retrieves the name of the meal associated with the order.
      * 
      * @return the name of the meal (String)
@@ -49,4 +53,9 @@ public class Order {
     public String getMealName() {
         return mealName;
     }
+
+	public void setMealName(String string) {
+this.mealName=string;
+
+	}
 }

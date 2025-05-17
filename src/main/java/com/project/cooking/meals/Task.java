@@ -19,7 +19,11 @@ public class Task {
         this.description = description;
     }
 
-    /**
+    public Task() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
      * Retrieves the description of the task.
      * 
      * @return the description of the task (String)
@@ -28,4 +32,13 @@ public class Task {
     public String getDescription() {
         return description;
     }
+
+	public void setDescription(String string) {
+this.description=string;
+
+	}
+
+	
+
+	
 }

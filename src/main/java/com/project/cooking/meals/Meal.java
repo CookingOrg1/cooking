@@ -43,7 +43,13 @@ public class Meal {
         this.ingredienT = ingredienT;
     }
 
-    /**
+    public Meal(String string, double d) {
+this.mealName=string;
+d=this.price;
+
+}
+
+	/**
      * Returns the name of the meal.
      *
      * @return meal name

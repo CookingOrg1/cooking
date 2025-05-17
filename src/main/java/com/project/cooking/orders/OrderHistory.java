@@ -44,4 +44,9 @@ public class OrderHistory {
     public boolean isEmpty() {
         return orders.isEmpty();
     }
+
+	public void setOrders(List<Order> emptyList) {
+this.orders=emptyList;
+
+	}
 }
