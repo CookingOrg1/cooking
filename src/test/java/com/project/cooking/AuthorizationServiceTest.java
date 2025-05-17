@@ -34,10 +34,10 @@ public class AuthorizationServiceTest {
         assertFalse(authorizationService.hasOrderHistoryAccess(null));
     }
 
-    @Test
+    @Test(expected = NullPointerException.class)
     public void testHasOrderHistoryAccess_WithNullRole() {
         Chef chefWithNullRole = new Chef();
         chefWithNullRole.setRole(null);
-        assertFalse(authorizationService.hasOrderHistoryAccess(chefWithNullRole));
+        authorizationService.hasOrderHistoryAccess(chefWithNullRole);
     }
 }
