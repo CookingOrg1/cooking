@@ -110,7 +110,6 @@ public class SystemAdminTest {
         assertNull(systemAdmin.getPhone());
     }
 
-    // Additional scenario to modify and verify all attributes at once
     @Given("I create a system administrator and set all attributes")
     public void iCreateASystemAdministratorAndSetAllAttributes() {
         systemAdmin = new SystemAdmin("adminUser", "adminPass");

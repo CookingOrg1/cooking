@@ -20,6 +20,7 @@ public class Chef {
     private String firstName;
     private String lastName;
     private String email;
+    String specialty;
     private String phone;
     private List<String> assignedCustomers;
 
@@ -336,5 +337,19 @@ public class Chef {
     public void addAssignedCustomer(String customerName) {
         this.assignedCustomers.add(customerName);
     }
+    
+public void  setName(String name)
+{
+this.name=name;
+	
+	
+}
+
+public void setSpecialty(String specialty) {
+	this.specialty=specialty;
+}
+
+	
+	
 }
 
