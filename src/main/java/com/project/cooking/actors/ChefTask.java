@@ -4,6 +4,7 @@ public class ChefTask {
 
     private String description;
     private int priority; 
+
     private boolean completed;
 
     /**
@@ -28,7 +29,12 @@ public class ChefTask {
         this.completed = false;
     }
 
-    /**
+    public ChefTask(String string1) {
+	this.description=string1;
+	
+	}
+
+	/**
      * Retrieves the description of the task.
      * 
      * @author abood
