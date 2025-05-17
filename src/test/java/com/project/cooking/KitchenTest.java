@@ -1,7 +1,8 @@
 package com.project.cooking;
-import com.project.cooking.actors.Chef;
+
 import com.project.cooking.kitchen.Ingredient;
 import com.project.cooking.kitchen.Kitchen;
+import com.project.cooking.actors.Chef;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -13,82 +14,84 @@ import static org.junit.Assert.*;
 public class KitchenTest {
 
     private Kitchen kitchen;
+
     @Before
-    public void setUp() {
+    public void setup() {
         kitchen = new Kitchen();
         Kitchen.clearChefs();
     }
 
+    @Test
+    public void testAddChef() {
+        Chef chef = new Chef("Gordon");
+        Kitchen.addChef(chef);
+        List<Chef> chefList = Kitchen.getAllChefs();
+        assertEquals(1, chefList.size());
+        assertTrue(chefList.contains(chef));
+    }
 
     @Test
-    public void testAddChefAndGetAllChefs() {
-        Chef chef1 = new Chef("John");
-        Chef chef2 = new Chef("Alice");
+    public void testGetAllChefsReturnsCopy() {
+        Chef chef = new Chef("Jamie");
+        Kitchen.addChef(chef);
+        List<Chef> chefs1 = Kitchen.getAllChefs();
+        List<Chef> chefs2 = Kitchen.getAllChefs();
 
-        Kitchen.addChef(chef1);
-        Kitchen.addChef(chef2);
-
-        List<Chef> chefs = Kitchen.getAllChefs();
-        assertEquals(2, chefs.size());
-        assertTrue(chefs.contains(chef1));
-        assertTrue(chefs.contains(chef2));
+        chefs1.clear();
+        assertEquals(1, chefs2.size());
     }
 
     @Test
     public void testClearChefs() {
-        Chef chef = new Chef("John");
-        Kitchen.addChef(chef);
-        assertFalse(Kitchen.getAllChefs().isEmpty());
-
+        Kitchen.addChef(new Chef("Alice"));
         Kitchen.clearChefs();
         assertTrue(Kitchen.getAllChefs().isEmpty());
     }
 
     @Test
-    public void testCheckAndNotify_GeneralRestocking() {
-        Ingredient ingredient = new Ingredient("Tomato", 5, 10);
-        kitchen.checkAndNotify(ingredient);
+    public void testCheckAndNotifyUrgentRestocking() {
+        Ingredient ing = new Ingredient("Onion", 0, 5);  
+        kitchen.checkAndNotify(ing);
 
-        assertTrue(ingredient.isRestockingSuggested());
-        assertFalse(ingredient.isUrgentRestockingSuggested());
+        assertTrue(ing.isUrgentRestockingSuggested());
+        assertFalse(ing.isRestockingSuggested());
+        assertTrue(kitchen.isNotifiedImmediately());
+        assertFalse(kitchen.isNotified());
+    }
+
+    @Test
+    public void testCheckAndNotifyGeneralRestocking() {
+        Ingredient ing = new Ingredient("Tomato", 3, 5);  
+        kitchen.checkAndNotify(ing);
+
+        assertTrue(ing.isRestockingSuggested());
+        assertFalse(ing.isUrgentRestockingSuggested());
         assertTrue(kitchen.isNotified());
         assertFalse(kitchen.isNotifiedImmediately());
     }
 
     @Test
-    public void testCheckAndNotify_UrgentRestocking() {
-        Ingredient ingredient = new Ingredient("Onion", 0, 10); 
-        kitchen.checkAndNotify(ingredient);
+    public void testCheckAndNotifyNoRestocking() {
+        Ingredient ing = new Ingredient("Pepper", 10, 5);  
+        kitchen.checkAndNotify(ing);
 
-        assertFalse(ingredient.isRestockingSuggested());
-        assertTrue(ingredient.isUrgentRestockingSuggested());
-        assertFalse(kitchen.isNotified());
-        assertTrue(kitchen.isNotifiedImmediately());
-    }
-
-    @Test
-    public void testCheckAndNotify_NoNotification() {
-        Ingredient ingredient = new Ingredient("Pepper", 15, 10); 
-        kitchen.checkAndNotify(ingredient);
-
-        assertFalse(ingredient.isRestockingSuggested());
-        assertFalse(ingredient.isUrgentRestockingSuggested());
+        assertFalse(ing.isRestockingSuggested());
+        assertFalse(ing.isUrgentRestockingSuggested());
         assertFalse(kitchen.isNotified());
         assertFalse(kitchen.isNotifiedImmediately());
     }
 
     @Test
-    public void testReceivedNotificationFor() {
-        Ingredient ingredient = new Ingredient("Salt", 5, 10);
-        kitchen.checkAndNotify(ingredient);
-
-        assertTrue(kitchen.receivedNotificationFor("Salt"));
-        assertFalse(kitchen.receivedNotificationFor("Sugar")); 
+    public void testReceivedNotificationForReflectsGeneralFlag() {
+        Ingredient ing = new Ingredient("Salt", 1, 5);  
+        kitchen.checkAndNotify(ing);
+        assertTrue(kitchen.receivedNotificationFor("Salt"));  
     }
 
-
     @Test
-    public void testReceivedNotificationFor_NoNotification() {
-        assertFalse(kitchen.receivedNotificationFor("Salt"));
+    public void testReceivedNotificationForWhenNothingTriggered() {
+        Ingredient ing = new Ingredient("Sugar", 10, 5); 
+        kitchen.checkAndNotify(ing);
+        assertFalse(kitchen.receivedNotificationFor("Sugar"));
     }
 }

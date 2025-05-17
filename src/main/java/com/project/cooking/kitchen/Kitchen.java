@@ -17,7 +17,9 @@ public class Kitchen {
      * 
      * @author abood
      */
-    private static List<Chef> chefs = new ArrayList<>();
+    private static  final List<Chef> chefs = new ArrayList<>();
+
+
 
     /**
      * Indicates whether a general restocking notification has been sent.
@@ -129,4 +131,5 @@ public class Kitchen {
     public boolean receivedNotificationFor(String ingredientName) {
         return notified;
     }
+    
 }

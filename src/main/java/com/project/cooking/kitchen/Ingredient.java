@@ -23,6 +23,8 @@ public class Ingredient {
     private boolean restockingSuggested = false;
     private boolean urgentRestockingSuggested = false;
 
+    
+    
     /**
      * Constructor with name and threshold.
      * @param name Name of the ingredient.
