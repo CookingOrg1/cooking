@@ -42,7 +42,12 @@ public class Customer {
     public Customer() {
     }
 
-    /**
+    public Customer(String string1) {
+    	this.name=string1;
+    	
+	}
+
+	/**
      * Sets the dietary preferences of the customer.
      * This method allows setting the dietary preferences for the customer, 
      * which helps in meal customization based on their needs.

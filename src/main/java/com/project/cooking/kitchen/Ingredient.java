@@ -16,9 +16,9 @@ public class Ingredient {
     private boolean restockingSuggested;
     private boolean urgentRestockingSuggested;
     private boolean isAvailable = true;
-    private LocalDate expiryDate;
+    public LocalDate expiryDate;
     private int stock;
-    private int reorderThreshold;
+    public int reorderThreshold;
     private boolean isAllowed;
     int quantity;
     private String unit;
