@@ -43,11 +43,10 @@ public class Meal {
         this.ingredienT = ingredienT;
     }
 
-    public Meal(String string, double d) {
-this.mealName=string;
-d=this.price;
-
-}
+    public Meal(String name, double price) {
+        this.mealName = name;
+        this.price = price;
+    }
 
 	/**
      * Returns the name of the meal.
@@ -189,4 +188,8 @@ d=this.price;
     public void setIngredients(List<String> ingredienT) {
         this.ingredienT = ingredienT;
     }
+   
+   
+
+    
 }
